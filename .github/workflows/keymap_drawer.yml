@@ -1,10 +1,11 @@
 name: Draw ZMK keymaps
+# NOTE: auto-draw on push is disabled. This keymap is built on urob's
+# zmk-helpers macros (ZMK_BASE_LAYER, ZMK_LAYER, ...), which keymap-drawer's
+# preprocessor-only parser cannot expand, so the parse step fails. Run manually
+# via workflow_dispatch only if/when a drawer pipeline that feeds the helper
+# headers is set up. See README for status.
 on:
   workflow_dispatch:
-  push:
-    paths:
-      - "keymap_drawer.config.yaml"
-      - "config/**"
 
 jobs:
   draw:
