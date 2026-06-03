@@ -41,6 +41,9 @@
 #define U_COPY  &kp LG(C)
 #define U_PASTE &kp LG(V)
 
+/* Hyper = all four mods held (Cmd+Ctrl+Alt+Shift on macOS) */
+#define HYPER LG(LC(LA(LSHFT)))
+
 /* Mouse move / wheel */
 #define U_MS_U &mmv MOVE_UP
 #define U_MS_D &mmv MOVE_DOWN
@@ -109,6 +112,13 @@
             layers = <BASE>;
             timeout-ms = <40>;
         };
+
+        combo_tab {              // O + P -> Tab (right-hand top corner).
+            bindings = <&kp TAB>;
+            key-positions = <8 9>;
+            layers = <BASE>;
+            timeout-ms = <40>;
+        };
     };
 
     keymap {
@@ -118,7 +128,7 @@
             display-name = "Base";
             bindings = <
   &kp Q          &kp W          &kp E          &kp R          &kp T              &kp Y          &kp U          &kp I          &kp O          &kp P
-  &hml LGUI A    &hml LALT S    &hml LCTRL D   &hml LSHFT F   &kp G              &kp H          &hmr LSHFT J   &hmr LCTRL K   &hmr LALT L    &hmr LGUI SEMI
+  &hml LGUI A    &hml LALT S    &hml LCTRL D   &hml LSHFT F   &hml HYPER G       &hmr HYPER H   &hmr LSHFT J   &hmr LCTRL K   &hmr LALT L    &hmr LGUI SEMI
   &kp Z          &kp X          &kp C          &kp V          &kp B              &kp N          &kp M          &kp COMMA      &kp DOT        &kp SLASH
                                 &lt NAV TAB    &lt MOUSE BSPC                    &lt SYM SPACE  &lt NUM DEL
             >;
@@ -167,7 +177,7 @@
         sym_layer {
             display-name = "Sym";
             bindings = <
-  &kp LBRC       &kp AMPS       &kp ASTRK      &kp LPAR       &kp RBRC           XXX            XXX            XXX            XXX            XXX
+  &kp LBRC       &kp AMPS       &kp ASTRK      &kp SQT        &kp RBRC           XXX            XXX            XXX            XXX            XXX
   &kp COLON      &kp DLLR       &kp PRCNT      &kp CARET      &kp PLUS           XXX            &kp LSHFT      &kp LCTRL      &kp LALT       &kp LGUI
   &kp TILDE      &kp EXCL       &kp AT         &kp HASH       &kp PIPE           XXX            XXX            XXX            XXX            XXX
                                 &kp LPAR       &kp RPAR                          ___            ___
