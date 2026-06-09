@@ -20,7 +20,7 @@ layers:
   - {t: J, h: '$$mdi:apple-keyboard-shift$$'}
   - {t: K, h: '$$mdi:apple-keyboard-control$$'}
   - {t: L, h: '$$mdi:apple-keyboard-option$$'}
-  - {t: ;, h: LGUI, s: ':'}
+  - {t: '''', h: LGUI, s: '"'}
   - Z
   - X
   - C
@@ -32,8 +32,8 @@ layers:
   - {t: ., s: '>'}
   - {t: /, s: '?'}
   - {t: '$$mdi:keyboard-tab$$', h: Nav}
-  - {t: '$$mdi:backspace$$', h: Mouse}
-  - {t: '$$mdi:keyboard-space$$', h: Sym}
+  - {t: '$$mdi:backspace$$', type: backspace}
+  - $$mdi:keyboard-space$$
   - {t: '$$mdi:backspace-reverse-outline$$', h: Num}
   Nav:
   - {t: '$$mdi:minus-circle-outline$$', type: none}
@@ -81,7 +81,7 @@ layers:
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - LGUI
+  - {t: LGUI, type: held}
   - $$mdi:apple-keyboard-option$$
   - $$mdi:apple-keyboard-control$$
   - $$mdi:apple-keyboard-shift$$
@@ -116,7 +116,7 @@ layers:
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - LGUI
+  - {t: LGUI, type: held}
   - $$mdi:apple-keyboard-option$$
   - $$mdi:apple-keyboard-control$$
   - $$mdi:apple-keyboard-shift$$
@@ -179,7 +179,7 @@ layers:
   - '{'
   - '&'
   - '*'
-  - {t: '''', s: '"'}
+  - _
   - '}'
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
@@ -195,7 +195,7 @@ layers:
   - $$mdi:apple-keyboard-shift$$
   - $$mdi:apple-keyboard-control$$
   - $$mdi:apple-keyboard-option$$
-  - LGUI
+  - {t: LGUI, type: held}
   - '~'
   - '!'
   - '@'
@@ -230,7 +230,7 @@ layers:
   - $$mdi:apple-keyboard-shift$$
   - $$mdi:apple-keyboard-control$$
   - $$mdi:apple-keyboard-option$$
-  - LGUI
+  - {t: LGUI, type: held}
   - F10
   - F1
   - F2
@@ -251,4 +251,10 @@ combos:
   l: [Base]
 - p: [8, 9]
   k: $$mdi:keyboard-tab$$
+  l: [Base]
+- p: [10, 31]
+  k: Mouse
+  l: [Base]
+- p: [19, 32]
+  k: Sym
   l: [Base]
