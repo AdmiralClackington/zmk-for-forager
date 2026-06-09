@@ -119,6 +119,20 @@
             layers = <BASE>;
             timeout-ms = <40>;
         };
+
+        combo_mouse {            // A + left inner thumb (hold) -> Mouse layer.
+            bindings = <&mo MOUSE>;
+            key-positions = <10 31>;
+            layers = <BASE>;
+            timeout-ms = <50>;
+        };
+
+        combo_sym {              // ' + right inner thumb (hold) -> Sym layer.
+            bindings = <&mo SYM>;
+            key-positions = <19 32>;
+            layers = <BASE>;
+            timeout-ms = <50>;
+        };
     };
 
     keymap {
@@ -130,7 +144,7 @@
   &kp Q          &kp W          &kp E          &kp R          &kp T              &kp Y          &kp U          &kp I          &kp O          &kp P
   &hml LGUI A    &hml LALT S    &hml LCTRL D   &hml LSHFT F   &hml HYPER G       &hmr HYPER H   &hmr LSHFT J   &hmr LCTRL K   &hmr LALT L    &hmr LGUI SQT
   &kp Z          &kp X          &kp C          &kp V          &kp B              &kp N          &kp M          &kp COMMA      &kp DOT        &kp SLASH
-                                &lt NAV TAB    &lt MOUSE BSPC                    &lt SYM SPACE  &lt NUM DEL
+                                &lt NAV TAB    &kp BSPC                          &kp SPACE      &lt NUM DEL
             >;
         };
 
