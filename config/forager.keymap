@@ -63,6 +63,16 @@
 
 / {
     behaviors {
+        /* Shift+Backspace -> forward Delete (host-independent).
+         * mod-morph strips the triggering shift by default, so the
+         * output is a clean DEL rather than Shift+DEL. */
+        bspc_del: backspace_delete {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp BSPC>, <&kp DEL>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
         /* Home-row mods - urob's "timeless" tuning. */
         hml: home_row_mod_left {
             compatible = "zmk,behavior-hold-tap";
@@ -144,7 +154,7 @@
   &kp Q          &kp W          &kp E          &kp R          &kp T              &kp Y          &kp U          &kp I          &kp O          &kp P
   &hml LGUI A    &hml LALT S    &hml LCTRL D   &hml LSHFT F   &hml HYPER G       &hmr HYPER H   &hmr LSHFT J   &hmr LCTRL K   &hmr LALT L    &hmr LGUI SQT
   &kp Z          &kp X          &kp C          &kp V          &kp B              &kp N          &kp M          &kp COMMA      &kp DOT        &kp SLASH
-                                &lt NAV TAB    &kp BSPC                          &kp SPACE      &lt NUM DEL
+                                &lt NAV TAB    &bspc_del                         &kp SPACE      &lt NUM DEL
             >;
         };
 
