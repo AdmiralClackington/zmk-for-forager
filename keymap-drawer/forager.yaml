@@ -31,10 +31,10 @@ layers:
   - {t: ',', s: <}
   - {t: ., s: '>'}
   - {t: /, s: '?'}
-  - {t: '$$mdi:keyboard-tab$$', h: Nav}
-  - {t: '$$mdi:backspace$$', type: backspace}
+  - Nav
+  - {t: '$$mdi:backspace$$', s: '$$mdi:backspace-reverse-outline$$'}
   - $$mdi:keyboard-space$$
-  - {t: '$$mdi:backspace-reverse-outline$$', h: Num}
+  - Num
   Nav:
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
