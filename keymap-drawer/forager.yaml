@@ -32,8 +32,8 @@ layers:
   - {t: ., s: '>'}
   - {t: /, s: '?'}
   - Nav
-  - {t: '$$mdi:backspace$$', s: '$$mdi:backspace-reverse-outline$$'}
-  - $$mdi:keyboard-space$$
+  - '&lt_bspc 2'
+  - {t: '$$mdi:keyboard-space$$', h: Sym}
   - Num
   Nav:
   - {t: '$$mdi:minus-circle-outline$$', type: none}
@@ -81,7 +81,7 @@ layers:
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: LGUI, type: held}
+  - LGUI
   - $$mdi:apple-keyboard-option$$
   - $$mdi:apple-keyboard-control$$
   - $$mdi:apple-keyboard-shift$$
@@ -102,7 +102,7 @@ layers:
   - $$mdi:pan-up$$
   - $$mdi:pan-right$$
   - {t: '$$mdi:transfer$$', type: trans}
-  - {type: held}
+  - {t: '$$mdi:transfer$$', type: trans}
   - $$mdi:mouse-left-click-outline$$
   - $$mdi:mouse-right-click-outline$$
   Media:
@@ -116,7 +116,7 @@ layers:
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: LGUI, type: held}
+  - LGUI
   - $$mdi:apple-keyboard-option$$
   - $$mdi:apple-keyboard-control$$
   - $$mdi:apple-keyboard-shift$$
@@ -137,7 +137,7 @@ layers:
   - {h: '3', s: '$$mdi:bluetooth-connect$$'}
   - {h: '4', s: '$$mdi:bluetooth-connect$$'}
   - {type: held}
-  - {type: held}
+  - {t: '$$mdi:transfer$$', type: trans}
   - $$mdi:play-pause$$
   - $$mdi:volume-off$$
   Num:
@@ -195,7 +195,7 @@ layers:
   - $$mdi:apple-keyboard-shift$$
   - $$mdi:apple-keyboard-control$$
   - $$mdi:apple-keyboard-option$$
-  - {t: LGUI, type: held}
+  - LGUI
   - '~'
   - '!'
   - '@'
@@ -230,7 +230,7 @@ layers:
   - $$mdi:apple-keyboard-shift$$
   - $$mdi:apple-keyboard-control$$
   - $$mdi:apple-keyboard-option$$
-  - {t: LGUI, type: held}
+  - LGUI
   - F10
   - F1
   - F2
@@ -251,10 +251,4 @@ combos:
   l: [Base]
 - p: [8, 9]
   k: $$mdi:keyboard-tab$$
-  l: [Base]
-- p: [10, 31]
-  k: Mouse
-  l: [Base]
-- p: [19, 32]
-  k: Sym
   l: [Base]
